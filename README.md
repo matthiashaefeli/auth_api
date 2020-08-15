@@ -1,11 +1,11 @@
 # Simple Rails user Authenticate API
 
-# Requirements
+## Requirements
 
 Ruby 2.7.0
 Rails 6.0.3
 
-# How to set up locally
+## How to set up locally
 
 ```
 $ git clone https://github.com/matthiashaefeli/auth_api.git
@@ -15,19 +15,19 @@ $ rails db:create
 $ rails db:migrate
 ```
 
-# Running server
+## Running server
 
 ```
 $ rails s
 ```
 
-# Run test suit
+## Run test suit
 
 ```
 $ rspec
 ```
 
-# Deploy to Heroku
+## Deploy to Heroku
 
 ```
 $ heroku login
@@ -38,9 +38,9 @@ $ heroku ps:scale web=1  # ensure one dyno is running
 $ heroku ps  # check dynos
 ```
 
-# Create a User
+## Create a User
 
-## Ruby
+### Ruby
 
 ```
 require 'net/http'
@@ -60,7 +60,7 @@ response = Net::HTTP.start(uri.host, uri.port) do |http|
 end
 ```
 
-## Postman
+### Postman
 
 POST: http://my_path/signup
 
@@ -76,9 +76,9 @@ Body: raw
 }
 ```
 
-# Sign in User
+## Sign in User
 
-## Ruby
+### Ruby
 
 ```
 require 'net/http'
@@ -100,7 +100,7 @@ end
 token = JSON.parse(response.body)['auth_token']
 ```
 
-## Postman
+### Postman
 
 POST: http://my_path/signin
 
